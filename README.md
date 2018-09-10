@@ -39,9 +39,11 @@ By default, output files are named SITE_overflights.csv, where SITE is the speci
 
 ### flight_event_extractor
 
-*Note: This script **must run in a python 2.x environment on a computer running arcmap**. A yml file for building such an environment, named python3soundDBenv.yml, can be found in this repository. If the version of arcmap is different than Desktop 10.5, the following lines in the script need to be changed:*
-```sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\arcpy")
-sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\bin")```
+*Note: This script **must run in a python 2.x environment on a computer running arcmap**. A yml file for building such an environment, named python2-arcpyenv.yml, can be found in this repository. If the version of arcmap is different than Desktop 10.5, the following lines in thea script need to be changed to reflect the right version:*
+```
+sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\arcpy")
+sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\bin")
+```
 
 The ultimate goal of the first two scripts is to create two files: a srcID file containing predicted overflight events, and an overflights output file containing detailed information about the location and velocity of the plane at the time of closest approach.
 
