@@ -39,6 +39,10 @@ By default, output files are named SITE_overflights.csv, where SITE is the speci
 
 ### flight_event_extractor
 
+*Note: This script **must run in a python 2.x environment on a computer running arcmap**. A yml file for building such an environment, named python3soundDBenv.yml, can be found in this repository. If the version of arcmap is different than Desktop 10.5, the following lines in the script need to be changed:*
+```sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\arcpy")
+sys.path.append(r"C:\Program Files (x86)\ArcGIS\Desktop10.5\bin")```
+
 The ultimate goal of the first two scripts is to create two files: a srcID file containing predicted overflight events, and an overflights output file containing detailed information about the location and velocity of the plane at the time of closest approach.
 
 To run the **flight_event_extractor** script, place the input shapefiles (allstations.shp, flight_pts.shp, and flight_lines.shp) in a single folder. The script will prompt the user to enter the path to this "working directory" when it is run. If the file names are changed the names entered in the script will need to be changed.
@@ -53,4 +57,6 @@ The four digit code of the sound station you would like to calculate the closest
 
 ### Flight_Event_to_SRCID
 
-This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. This script **must run in a python 3.x environment**. The 
+*Note: This script **must run in a python 3.x environment**. A yml file for building such an environment, named python3soundDBenv.yml, can be found in this repository.*
+
+This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. 
