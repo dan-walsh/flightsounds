@@ -61,4 +61,4 @@ The four digit code of the sound station you would like to calculate the closest
 
 *Note: This script **must run in a python 3.x environment**. A yml file for building such an environment, named python3soundDBenv.yml, can be found in this repository.*
 
-This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. 
+This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. The output is saved in the selected working directory as SRCID_DENAXXXX, where XXXX is the station code for the sound station under consideration. 
