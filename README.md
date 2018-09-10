@@ -38,3 +38,13 @@ Output files are named SITE_overflights.csv, where SITE is the specific site cod
 ## Running the Scripts
 
 The ultimate goal of the first two scripts is to create two files: a srcID file containing predicted overflight events, and an overflights output file containing detailed information about the location and velocity of the plane at the time of closest approach.
+
+To run the **flight_event_extractor** script, place the input shapefiles (allstations.shp, flight_pts.shp, and flight_lines.shp) in a single folder. The script will prompt the user to enter the path to this "working directory" when it is run. If the file names are changed the names entered in the script will need to be changed.
+
+The script requires two additional inputs from the user: 
+
+#### flight search radius 
+The radius outward from the sound station within which flights will be assessed for point of closest approach (measured in meters). Values below 5000 are not reccomended as planes frequently travel these distances during the interval between points, meaning it is unlikely the script will have the two points it needs to calculate the closest approach.
+
+#### station code 
+The four digit code of the sound station you would like to calculate the closest approach to.
