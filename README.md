@@ -33,9 +33,11 @@ desc_ - the unique flight identifier, matched to the identifiers in the flight_p
 
 
 ### Output Files
-Output files are named SITE_overflights.csv, where SITE is the specific site code.
+By default, output files are named SITE_overflights.csv, where SITE is the specific site code. They are saved directly in the selected working directory.
 
 ## Running the Scripts
+
+### flight_event_extractor
 
 The ultimate goal of the first two scripts is to create two files: a srcID file containing predicted overflight events, and an overflights output file containing detailed information about the location and velocity of the plane at the time of closest approach.
 
@@ -48,3 +50,7 @@ The radius outward from the sound station within which flights will be assessed 
 
 #### station code 
 The four digit code of the sound station you would like to calculate the closest approach to.
+
+### Flight_Event_to_SRCID
+
+This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. This script **must run in a python 3.x environment**. The 
