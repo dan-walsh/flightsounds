@@ -72,6 +72,12 @@ The resulting events are represented by the narrow rectangles in the image below
 ![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/working%20in%20splat.JPG "Working in SPLAT")
 
 ## Geometric Calculations Diagram
+Because the overflight GPS tracks are made up of straight line segments that always start and end at a GPS point, we can interpolate between the GPS points using simple trigonometric equations. All results are based on linear interpolations, which work in almost all cases; if a plane makes a very sharp turn and has a long GPS interval, it is possible that the straight line connecting the two points is some distance from the plane's location. This problem can only be corrected by getting more closely spaced gps data.
+
+The closest distance to the sound station is calculated in three dimensions using arcpy's near3d feature. The fraction of the distance covered between the points at closest approach is used to interpolate average airspeed, climb/descent rate, and other factors.
+
+Theta is the vector of the flight, measured as a compass bearing clockwise from north.
+
 
 ![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/overflight.jpg "Geometrical calculations.")
 
