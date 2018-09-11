@@ -6,6 +6,8 @@ The output csv file is used as an input to [**`Flight_Event_to_SRCID.py`**](http
 
 The resulting SRCID file contains a list of events with reference numbers. When opened in SPLAT, each calculated aircraft approach for a given site will appear as a 1-minute rectangle centered on the event. The user must then manually re-annotate each event using the reference number as a source ID. The events can then be joined back to the overflights data using [**`SPLAT_append.py`**](), which joins the original csv flight event file to annotation results.
 
+![workflow diagram](https://github.com/dan-walsh/flightsounds/blob/master/images/Concessionaire%20Flight%20Track%20Workflow%20Diagram.JPG "Workflow diagram")
+
 ---
 
 ## Required Inputs and Outputs:
