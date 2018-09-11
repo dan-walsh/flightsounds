@@ -4,7 +4,7 @@ The script [**`flight_event_extractor.py`**](https://github.com/dan-walsh/flight
 
 The output csv file is used as an input to [**`Flight_Event_to_SRCID.py`**](https://github.com/dan-walsh/flightsounds/blob/master/Flight_Event_to_SRCID.py), which builds a standard NPS SRCID file of each overflight event within a given radius of the sound station. The second script runs in a [Python 3.5, 64-bit environment](https://github.com/dan-walsh/flightsounds/blob/master/python3soundDBenv.yml) with NPS libraries [`iyore`](https://github.com/nationalparkservice/iyore) and [`soundDB`](https://github.com/dbetchkal/soundDB) installed.
 
-The resulting SRCID file contains a list of events with reference numbers. When opened in SPLAT, each calculated aircraft approach for a given site will appear as a 1-minute rectangle centered on the event. The user must then manually re-annotate each event using the reference number as a source ID. The events can then be joined back to the overflights data using [**`SPLAT_append.py`**](), which joins the original csv flight event file to annotation results.
+The resulting SRCID file contains a list of events with reference numbers. When opened in SPLAT, each calculated aircraft approach for a given site will appear as a 1-minute rectangle centered on the event. The user must then manually re-annotate each event to it's correct duration using the reference number as a source ID. The events can then be joined back to the overflights data using [**`SPLAT_append.py`**](), which joins the original csv flight event file to annotation results.
 
 ![workflow diagram](https://github.com/dan-walsh/flightsounds/blob/master/images/Concessionaire%20Flight%20Track%20Workflow%20Diagram.JPG "Workflow diagram")
 
@@ -12,7 +12,7 @@ The resulting SRCID file contains a list of events with reference numbers. When 
 
 ## Required Inputs and Outputs:
 
-The input and output file names can be specified when running the scripts; names are suggested for consistency.
+The input and output file names can be specified when running the scripts; standardized names are suggested for consistency.
 
 ### Input files:
     
