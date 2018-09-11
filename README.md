@@ -59,7 +59,7 @@ By default, output files are named SITE_overflights.csv, where SITE is the speci
 
 ```
 >conda env create -f "your path to python2-arcpyenv.yml"
->activate soundDB
+>activate arcpy
 ```
 
 *If the version of arcmap is different than Desktop 10.5, the following lines in the script need to be changed to reflect the right version:*
@@ -75,10 +75,10 @@ To run the **`flight_event_extractor.py`** script, place the input shapefiles (*
 The script requires two additional inputs from the user: 
 
 #### flight search radius 
-The radius outward from the sound station within which flights will be assessed for point of closest approach (measured in meters). Values below 5000 meters are not reccomended as planes frequently travel these distances during the interval between points, meaning it is unlikely the script will have the two points it needs to calculate the closest approach.
+The radius outward from the sound station within which flights will be assessed for point of closest approach (measured in meters). Values below 5000 meters are not reccomended as planes frequently travel these distances during the interval between points, meaning it is unlikely the script will have the two points it needs to calculate the closest approach. The number of events detected (and the calculation time) will increase as the radius is increased.
 
 #### station code 
-The four character alpha site code of the sound station you would like to calculate the closest approach to.
+The four character alpha site code of the sound station (contained in the input sound station shapefile) you would like to calculate the closest approach to.
 
 ### `Flight_Event_to_SRCID.py`
 
@@ -95,7 +95,7 @@ This script takes the output of the flight_event_extractor, eliminates all close
 
 The output of **`Flight_Event_to_SRCID.py`** is a SRCID file, and should be placed in the /users/USERNAME/My Documents/ToolboxOutput so that SPLAT will display the events when the correct hourly NVSPL file is loaded.
 
-The resulting events are represented by the narrow rectangles in the image below. The rectangles are centered around the time at which we would expect the flight to make its closest approach to the sound station. They are characterized in the SRCID file as having been annotated by user EXTRACTOR. The sound metric values all have dummy variables. The wide rectangles represent the exact same event, but annotated by the user based on the initial event. Each event is assigned a reference number by the script; **that same number must be used as a source ID when annotating the event in SPLAT**.
+The resulting events are represented by the narrow rectangles in the image below. The rectangles are centered around the time at which we would expect the flight to make its closest approach to the sound station. They are characterized in the SRCID file as having been annotated by user EXTRACTOR. The sound metric values all have dummy variables for these placeholder ractangles. The wide rectangles represent the exact same event, but annotated by the user based on the initial event. Each event is assigned a reference number by the script; **that same number must be used as a source ID when annotating the event in SPLAT**.
 
 ![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/working%20in%20splat.JPG "Working in SPLAT")
 
