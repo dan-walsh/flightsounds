@@ -63,4 +63,10 @@ The four digit code of the sound station you would like to calculate the closest
 
 This script takes the output of the flight_event_extractor, eliminates all closest approach events that do not have matching data in the sound database (accessed via soundDB), and saves the remaining events in SRCID format, allowing them to be manually quantified in splat. The output is saved in the selected working directory as SRCID_DENAXXXX, where XXXX is the station code for the sound station under consideration. 
 
-![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/working%20in%20splat.JPG "Logo Title Text 1")
+### Splatting the Events
+
+The output of **Flight_Event_to_SRCID** is a sourceID file, and should be placed in the /users/USERNAME/My Documents/ToolboxOutput so that SPLAT will display the events when the correct hourly nvspl file is loaded.
+
+The resulting events are represented by the narrow rectangles in the image below. The rectangles are centered around the time at which we would expect the flight to make its closest approach to the sound station. They are characterized in the srcID file as having been annotated by user EXTRACTOR. The sound metric values all have dummy variables. The wide rectangles represent the exact same event, but annotated by the user based on the initial event. Each event is assigned an annotation number by the script; **that same number must be used when annotating the actual event**.
+
+![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/working%20in%20splat.JPG "Working in SPLAT")
