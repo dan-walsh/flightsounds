@@ -73,5 +73,5 @@ The resulting events are represented by the narrow rectangles in the image below
 
 ## Geometric Calculations Diagram
 
-![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/overflight.JPG "Geometrical calculations.")
+![alt text](https://github.com/dan-walsh/flightsounds/blob/master/images/overflight.jpg "Geometrical calculations.")
 
