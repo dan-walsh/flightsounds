@@ -6,7 +6,7 @@
 
 >"Concessioners are required to comply with applicable provisions of all laws, regulations, and policies that apply to natural and cultural resource protection."
 
-The ability for park managers to ascertain compliance is dependant entirely on a cooperative stewardship relationship with park Concession partners. In recent years aviation partners have provided Denali with tracklogs of flight positions throughout the operating season, a valuable dataset for managing the acoustic environment. 
+The ability of park managers to ascertain compliance is dependant entirely on a cooperative relationship with park Concession partners. In recent years aviation partners have provided Denali with tracklogs of flight positions throughout the operating season, a valuable dataset for stewardship of the park's acoustic environment. 
 
 The purpose of this repository, then, is to join those raw geographic data to acoustical data. In other words, to join the physical *cause* to the physical *effect* in a scientific sense. The scripts contained in this repository represent a workflow designed to perform the joining tasks.
 
